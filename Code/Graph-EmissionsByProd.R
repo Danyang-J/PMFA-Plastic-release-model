@@ -158,10 +158,7 @@ for(comp in comp.post){
 ### BAR PLOT ########################################################################
 
 library(ggplot2)
-library(sysfonts)
 library(patchwork)
-
-font_add(family = "Calibri", regular = "Calibri.ttf")
 
 #color_vector <- c("#f8b862","#0094c8","#badcad","#fef263","#00a381","#f4b3c2","#a59aca")
 
@@ -210,8 +207,7 @@ p1 <- ggplot(data, aes(x = prod, y = mean)) +
   ylim(0,NA) +
   coord_flip() +
   annotate ("text", x = -Inf, y = Inf, label = paste0("Σ = ",lab," t"), hjust = 1.05, vjust = -0.7)+
-  theme(text = element_text(family = "Calibri"),
-        axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black"))
 
 p1
 
@@ -260,8 +256,7 @@ p2 <- ggplot(data, aes(x = prod, y = mean)) +
   ylim(0,NA) +
   coord_flip() +
   annotate ("text", x = -Inf, y = Inf, label = paste0("Σ = ",lab," t"), hjust = 1.05, vjust = -0.7)+
-  theme(text = element_text(family = "Calibri"),
-        axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black"))
 
 p2
 
@@ -314,8 +309,7 @@ p3 <- ggplot(data, aes(x = prod, y = mean)) +
   ylim(0,NA) +
   coord_flip() +
   annotate ("text", x = -Inf, y = Inf, label = paste0("Σ = ",lab," t"), hjust = 1.05, vjust = -0.7)+
-  theme(text = element_text(family = "Calibri"),
-        axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black"))
 
 
 p3
@@ -369,8 +363,7 @@ p4 <- ggplot(data, aes(x = prod, y = mean)) +
   coord_flip() +
   ylim(0,NA) +
   annotate ("text", x = -Inf, y = Inf, label = paste0("Σ = ",lab," t"), hjust = 1.05, vjust = -0.7)+
-  theme(text = element_text(family = "Calibri"),
-        axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black"))
 
 p4
 
