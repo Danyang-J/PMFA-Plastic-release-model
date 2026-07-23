@@ -1,4 +1,4 @@
-# PMFA plastic release model
+# PMFA Plastic Release Model Framework
 
 ## Overview
 
@@ -77,7 +77,7 @@ install.packages(c(
   "trapezoid",
   "xlsx",
   "dplyr",
-  "sysfonts",
+  "ggplot2",
   "patchwork",
   "sm",
   "mc2d"
