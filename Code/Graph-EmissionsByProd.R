@@ -4,7 +4,7 @@ load("Input/InputReady.Mod2.Rdata")
 source("Code/functions.needed.analysis.R")
 source("Code/functions.needed.sci.not.R")
 library(xlsx)
-library(tidyverse)
+library(dplyr)
 
 soil.comp <- c("SoilMicro",
                "SoilMacro")
@@ -367,16 +367,18 @@ p4 <- ggplot(data, aes(x = prod, y = mean)) +
 
 p4
 
-save <- p1 + p2 + p3 + p4 +
+save.plot <- p1 + p2 + p3 + p4 +
   plot_layout(guides = 'collect')
 
-save
+save.plot
 
-ggsave("EmissionsByProd.png",
-       plot = save,
-       path = "Results",
-       width = 9.5, height = 6,
-       dpi = 500)
+ggsave(
+  filename = file.path("Results", "EmissionsByProd.png"),
+  plot = save.plot,
+  width = 9.5,
+  height = 6,
+  dpi = 500
+)
 
 data.to.print <- rbind(data.to.print.1,
                        data.to.print.2,

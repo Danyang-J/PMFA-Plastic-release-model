@@ -1,9 +1,9 @@
 ##### INTRO #######################################################################################
 
 # import the initial data
-Inp.CH <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheetName = "Input"))
-Coeff1 <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheetName = "Module1"))
-Coeff2 <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheetName = "Module2"))
+Inp.CH <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheet = "Input"))
+Coeff1 <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheet = "Module1"))
+Coeff2 <- as.matrix(read.xlsx(paste0("Input/",excel.file), sheet = "Module2"))
 
 # find all the compartment names
 Names <- unique(c(Coeff1[-1,c(1,2)], Coeff2[-1,c(1,2)]))

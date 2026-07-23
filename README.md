@@ -55,7 +55,7 @@ All numerical values in `Input/Sample_FeedData.xlsx` are synthetic. They must no
 The model is run through `Code/0-MasterScript.R`, which executes the following steps:
 
 1. `1-InputFormatting.R` imports the material inputs and transfer coefficients, assigns their probability distributions, and normalizes outgoing flows.
-2. `2-Merging.R` combines transfer coefficients within the anthroposphere with those for  release flows and prepares the complete transfer coefficient matrix.
+2. `2-Merging.R` combines transfer coefficients within the anthroposphere with those for release flows and prepares the complete transfer coefficient matrix.
 3. `3-CalculationScript.R` constructs and solves the material flow system for each polymer using Monte Carlo simulation.
 4. `Graph-EmissionsByProd.R` aggregates the simulated releases by product category, polymer, and receiving environmental compartment, then exports a figure and an Excel table.
 
@@ -76,10 +76,11 @@ install.packages(c(
   "openxlsx",
   "trapezoid",
   "xlsx",
-  "tidyverse",
+  "dplyr",
   "sysfonts",
   "patchwork",
-  "sm"
+  "sm",
+  "mc2d"
 ))
 ```
 
