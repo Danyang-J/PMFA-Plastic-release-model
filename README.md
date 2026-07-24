@@ -157,4 +157,4 @@ If you use or adapt this model, please cite:
 
 ## License
 
-This repository is released under the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) public-domain dedication. See `LICENSE` for the full legal text.
+This repository is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See `LICENSE` for the full license text.
